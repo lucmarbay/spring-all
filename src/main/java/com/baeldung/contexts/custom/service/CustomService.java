@@ -2,21 +2,34 @@ package com.baeldung.contexts.custom.service;
 
 import javax.annotation.Resource;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.stereotype.Service;
 
+import com.baeldung.contexts.CustomGreeting;
 import com.baeldung.contexts.Greeting;
 
 @Service
 public class CustomService {
 
-	@Resource
-    private Greeting greeting;
+//	@Autowired
+//	@Qualifier("greeting")
+	private Greeting greeting;
+	
+//	@Autowired
+//	@Qualifier("customGreeting")
+    private Greeting customGreeting;
+	
+	public CustomService(Greeting greeting, Greeting customGreeting) {
+		this.greeting = greeting;
+		this.customGreeting = customGreeting;
+	}
     
     public String customGreet(){
-    	String message1 = greeting.getMessage();
-    	String message2 = " Hola Luciano";
+    	String message1 = this.greeting.getMessage();
+    	String message2 = this.customGreeting.getMessage();
     	String message3 = message1 + message2;
-    	greeting.setMessage(message3);
-        return greeting.getMessage();
+        return message3;
     }
 }
