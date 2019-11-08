@@ -1,4 +1,4 @@
-package com.baeldung.contexts.services;
+package com.baeldung.contexts.custom.service;
 
 import javax.annotation.Resource;
 

@@ -1,4 +1,4 @@
-package com.baeldung.contexts.custom;
+package com.baeldung.contexts.custom.controller;
 
 import java.util.Arrays;
 
@@ -9,7 +9,7 @@ import org.springframework.web.context.ContextLoader;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.baeldung.contexts.services.CustomService;
+import com.baeldung.contexts.custom.service.CustomService;
 import com.baeldung.contexts.services.GreeterService;
 
 @Controller

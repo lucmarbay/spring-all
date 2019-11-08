@@ -10,7 +10,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = { "com.baeldung.contexts.custom" })
+@ComponentScan(basePackages = {"com.baeldung.contexts.custom"})
 public class CustomWebAppConfig {
 
 	@Bean
