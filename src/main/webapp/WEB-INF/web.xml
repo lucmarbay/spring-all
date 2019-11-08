@@ -10,24 +10,24 @@
     </absolute-ordering>-->
 
     <!-- root application context -->
-    <!-- <listener>
+     <!-- <listener>
         <listener-class>
             org.springframework.web.context.ContextLoaderListener
         </listener-class>
-    </listener>
-  	<context-param>
+    </listener>  -->
+  	<!-- <context-param>
     	<param-name>contextConfigLocation</param-name>
     	<param-value>/WEB-INF/rootApplicationContext.xml</param-value>
 	</context-param> -->
     <!-- <context-param>
         <param-name>contextClass</param-name>
         <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
-    </context-param>
-    <context-param>
+    </context-param> -->
+    <!-- <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>com.baeldung.contexts.config.RootApplicationConfig, com.baeldung.contexts.config.NormalWebAppConfig</param-value>
-    </context-param>
-    <context-param>
+    </context-param>  -->
+    <!-- <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>org.baeldung.bean.config</param-value>
     </context-param> -->
@@ -73,7 +73,7 @@
         </init-param>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>com.baeldung.contexts.config.NormalWebAppConfig</param-value>
+            <param-value>com.baeldung.contexts.config.RootApplicationConfig, com.baeldung.contexts.config.NormalWebAppConfig</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
