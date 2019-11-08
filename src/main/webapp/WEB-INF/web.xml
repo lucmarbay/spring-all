@@ -10,27 +10,27 @@
     </absolute-ordering>-->
 
     <!-- root application context -->
-    <!--<listener>
+    <!-- <listener>
         <listener-class>
             org.springframework.web.context.ContextLoaderListener
         </listener-class>
-    </listener>-->
-  	<!--<context-param>
+    </listener>
+  	<context-param>
     	<param-name>contextConfigLocation</param-name>
     	<param-value>/WEB-INF/rootApplicationContext.xml</param-value>
-	</context-param>-->
-    <!--<context-param>
+	</context-param> -->
+    <!-- <context-param>
         <param-name>contextClass</param-name>
         <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
     </context-param>
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>com.baeldung.contexts.config.RootApplicationConfig, com.baeldung.contexts.config.NormalWebAppConfig</param-value>
-    </context-param>-->
-    <!--<context-param>
+    </context-param>
+    <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>org.baeldung.bean.config</param-value>
-    </context-param>-->
+    </context-param> -->
 
 	<!-- secure web app context -->
     <!--<servlet>
@@ -50,7 +50,7 @@
     </servlet-mapping>-->
     
     <!-- normal web app context -->
-    <!--<servlet>
+    <!-- <servlet>
         <servlet-name>normal-webapp</servlet-name>
         <servlet-class>
             org.springframework.web.servlet.DispatcherServlet
@@ -60,7 +60,7 @@
     <servlet-mapping>
         <servlet-name>normal-webapp</servlet-name>
         <url-pattern>/api/*</url-pattern>
-    </servlet-mapping>-->
+    </servlet-mapping> -->
     <!-- normal webapp with annotations-based context -->
     <servlet>
         <servlet-name>normal-webapp-annotations</servlet-name>
@@ -80,7 +80,7 @@
     <servlet-mapping>
         <servlet-name>normal-webapp-annotations</servlet-name>
         <url-pattern>/api-ann/*</url-pattern>
-    </servlet-mapping>
+    </servlet-mapping> 
 
     <welcome-file-list>
         <welcome-file>/WEB-INF/index.jsp</welcome-file>
