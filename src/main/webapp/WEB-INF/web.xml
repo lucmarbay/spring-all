@@ -62,7 +62,7 @@
         <url-pattern>/api/*</url-pattern>
     </servlet-mapping> -->
     <!-- normal webapp with annotations-based context -->
-    <servlet>
+    <!-- <servlet>
         <servlet-name>normal-webapp-annotations</servlet-name>
         <servlet-class>
             org.springframework.web.servlet.DispatcherServlet
@@ -80,7 +80,28 @@
     <servlet-mapping>
         <servlet-name>normal-webapp-annotations</servlet-name>
         <url-pattern>/api-ann/*</url-pattern>
-    </servlet-mapping> 
+    </servlet-mapping> -->
+    
+    <!-- custom webapp with annotations-based context --> 
+    <servlet>
+        <servlet-name>custom-webapp-annotations</servlet-name>
+        <servlet-class>
+            org.springframework.web.servlet.DispatcherServlet
+        </servlet-class>
+        <init-param>
+            <param-name>contextClass</param-name>
+            <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+        </init-param>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>com.baeldung.contexts.config.RootApplicationConfig, com.baeldung.contexts.config.CustomWebAppConfig</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>custom-webapp-annotations</servlet-name>
+        <url-pattern>/api-custom/*</url-pattern>
+    </servlet-mapping>
 
     <welcome-file-list>
         <welcome-file>/WEB-INF/index.jsp</welcome-file>
