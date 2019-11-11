@@ -9,6 +9,7 @@ import javax.validation.constraints.NotNull;
 public class SaludoDTO implements Serializable{
 	
 	private String saludo;
+	@NotNull(message="El nombre es requerido")
 	private String nombre;
 	@Min(5)
 	@Max(10)
@@ -21,7 +22,7 @@ public class SaludoDTO implements Serializable{
 	public void setSaludo(String saludo) {
 		this.saludo = saludo;
 	}
-	@NotNull(message="El nombre es requerido")
+	
 	public String getNombre() {
 		return nombre;
 	}
