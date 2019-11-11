@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.baeldung.contexts.CustomGreeting;
 import com.baeldung.contexts.Greeting;
+import com.baeldung.contexts.custom.dto.SaludoDTO;
 
 @Service
 public class CustomService {
@@ -32,4 +33,18 @@ public class CustomService {
     	String message3 = message1 + message2;
         return message3;
     }
+    
+    public SaludoDTO saludar(String nombre) {
+    	SaludoDTO saludo = new SaludoDTO();
+    	saludo.setSaludo("Hola "+nombre+"!!");
+		return saludo;
+    }
+
+	public SaludoDTO saludarYValidar(SaludoDTO saludoDTO) {
+		SaludoDTO saludo = new SaludoDTO();
+		saludo.setNombre(saludoDTO.getNombre());
+		saludo.setEdad(saludoDTO.getEdad());
+		saludo.setSaludo("Hola "+saludo.getNombre()+"!! Tu edad es de "+saludo.getEdad()+" años.");
+		return saludo;
+	}
 }
