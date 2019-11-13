@@ -36,7 +36,8 @@ public class CustomService {
     
     public SaludoDTO saludar(String nombre) {
     	SaludoDTO saludo = new SaludoDTO();
-    	saludo.setSaludo("Hola "+nombre+"!!");
+    	saludo.setNombre(nombre);
+    	saludo.setSaludo("Hola "+saludo.getNombre()+"!!");
 		return saludo;
     }
 
