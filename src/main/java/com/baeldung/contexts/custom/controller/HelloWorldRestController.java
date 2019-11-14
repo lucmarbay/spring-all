@@ -30,6 +30,7 @@ public class HelloWorldRestController {
 	@ResponseBody
 	@PostMapping(value = "/", consumes = "application/json", produces = "application/json")
 	public SaludoDTO saludarYValidar(@Valid @RequestBody SaludoDTO saludoDTO) {
+		System.out.println("Prueba");
 		return customService.saludarYValidar(saludoDTO);
 	}
 }

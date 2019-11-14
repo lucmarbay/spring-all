@@ -14,7 +14,7 @@ import com.baeldung.contexts.Greeting;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = {"com.baeldung.contexts.custom"})
+@ComponentScan(basePackages = {"com.baeldung.contexts.custom", "com.everis.demo.autoconfigure"})
 public class CustomWebAppConfig {
 
 	@Bean

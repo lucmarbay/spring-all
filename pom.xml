@@ -12,8 +12,9 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../parent-boot-2</relativePath>
 	</parent>
-	<!-- starter del interceptor -->
+
 	<dependencies>
+		<!-- starter del interceptor -->
 		<dependency>
 			<groupId>com.everis</groupId>
 			<artifactId>demo-spring-boot-starter</artifactId>
